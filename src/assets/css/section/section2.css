@@ -1,0 +1,315 @@
+#section2 {
+    background: #FBEFE1;
+    padding: 200px 0 0;
+    overflow: hidden;
+}
+
+#section2 .container {
+    font-size: 0;
+    margin-bottom: 200px;
+}
+
+.about__wrap {
+    display: flex;
+}
+
+.about__tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 20px;
+    border-radius: 80px;
+    background-color: var(--r);
+    margin: 0 15px;
+    color: var(--primarycolor);
+    font-size: 30px;
+    font-weight: 700;
+    font-family: "Nunito";
+    margin-bottom: 40px;
+}
+
+.about__tag span {
+    background-image: url(../../img/heart.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 26px;
+    margin-right: 10px;
+}
+
+.about__left {
+    text-align: left;
+    color: var(--primarycolor);
+    font-family: "SCoreDream";
+    font-weight: 300;
+    font-size: 40px;
+    word-break: keep-all;
+    z-index: 2;
+    line-height: 1.7;
+}
+
+.about__left em {
+    line-height: 1;
+    background-color: var(--r);
+    padding: 2px 5px 0;
+    border-radius: 10px;
+    border-bottom: 5px solid var(--rd);
+}
+
+.about__left strong {
+    background-color: var(--b);
+    padding: 2px 5px 0;
+    border-radius: 10px;
+    border-bottom: 5px solid var(--bd);
+    font-weight: 300;
+    display: inline-flex;
+}
+
+.about__left b {
+    background-image: linear-gradient(#b9aef6e4, #b9aef6e4);
+    background-size: 100% 6px;
+    background-repeat: no-repeat;
+    background-position: 0% 82%;
+}
+
+.about__right {
+    padding-left: 60px;
+}
+
+.polaroidphoto {
+    width: 455px;
+    aspect-ratio: 1 / 1.25;
+    padding: 0.5vw;
+    background-color: var(--white);
+    border-radius: 2vw;
+    /* transform: rotate(3deg); */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-around;
+    position: relative;
+}
+
+.polarimage {
+    background-image: url(../../img/profileImg.jpg);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    border-radius: 2vw;
+    width: 400px;
+    aspect-ratio: auto 1 / 1;
+    z-index: 1;
+}
+
+.overlay {
+    position: absolute;
+    width: 455px;
+    aspect-ratio: auto 1 / 1.25;
+    background: linear-gradient(105deg, transparent 30%, #ffe375d1 45%, #9decfa8b 50%, transparent 54%);
+    filter: brightness(1.5) opacity(0.8);
+    mix-blend-mode: color-dodge;
+    background-size: 100% 100%;
+    background-position: 100%;
+    transition: all 0.1s;
+    z-index: 3;
+}
+
+.polartitle {
+    font-family: "Dancing Script";
+    font-size: 2.5vw;
+    color: var(--primarycolor);
+    text-align: right;
+    cursor: none;
+}
+
+#section2>div {
+    font-size: 10vw;
+    color: #6B51FE;
+    font-family: 'gambado-sans-forte';
+}
+
+#section2 .line1 {
+    width: 200%;
+    background-color: var(--b);
+    transform: rotate(1.47deg);
+    text-transform: uppercase;
+    white-space: nowrap;
+    margin-left: -5%;
+    display: flex;
+    align-items: center;
+}
+
+#section2 .line1 p {
+    display: flex;
+    align-items: center;
+}
+
+#section2 .line1 span {
+    flex-shrink: 0;
+    width: 9vw;
+    height: 9vw;
+    margin: 0 2vw;
+    display: inline-block;
+    background-image: url(../../img/line__img01.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+#section2 .line2 {
+    width: 200%;
+    background-color: var(--r);
+    transform: rotate(-0.33deg);
+    white-space: nowrap;
+    margin-left: -5%;
+    display: flex;
+    align-items: center;
+}
+
+#section2 .line2 p {
+    display: flex;
+    align-items: center;
+}
+
+#section2 .line2 span {
+    flex-shrink: 0;
+    width: 9vw;
+    height: 9vw;
+    margin: 0 2vw;
+    display: inline-block;
+    background-image: url(../../img/line__img02.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+#section2 .line3 {
+    width: 200%;
+    background-color: var(--y);
+    transform: rotate(1.33deg);
+    text-transform: uppercase;
+    white-space: nowrap;
+    margin-left: -5%;
+    margin-top: 2%;
+    display: flex;
+    align-items: center;
+}
+
+#section2 .line3 p {
+    display: flex;
+    align-items: center;
+}
+
+#section2 .line3 span {
+    flex-shrink: 0;
+    width: 9vw;
+    height: 9vw;
+    margin: 0 2vw;
+    display: inline-block;
+    background-image: url(../../img/line__img03.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+#section2 .line p.original {
+    animation: rolling 33s linear infinite;
+    animation-play-state: running;
+}
+
+#section2 .line p.clone {
+    animation: rolling 33s linear infinite;
+    animation-play-state: running;
+    animation-delay: 16.5s;
+    /* 애니메이션의 절반 시간 */
+}
+
+@keyframes rolling {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@media (max-width: 1300px) {
+    #section2 .container {
+        width: calc(100% - 200px);
+    }
+
+    .about__left {
+        font-size: 35px;
+    }
+
+    .polaroidphoto {
+        width: 30vw;
+    }
+
+    .overlay {
+        width: 30vw;
+    }
+
+    .polarimage {
+        width: 26vw;
+    }
+}
+
+@media (max-width: 1200px) {
+    .about__left {
+        font-size: 2.5vw;
+    }
+
+    .about__tag {
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+
+    .about__tag span {
+        width: 26px;
+        height: 22px;
+    }
+}
+
+@media (max-width: 880px) {
+    #section2 {
+        padding: 10vw 0 0;
+    }
+
+    #section2 .container {
+        width: calc(100% - 100px);
+        margin-bottom: 10vw;
+    }
+
+    .about__tag {
+        font-size: 2.5vw;
+        padding: 0.8vw 2vw;
+        margin: 0 0 2vw;
+    }
+
+    .about__tag span {
+        width: 2.4vw;
+        height: 2.2vw;
+    }
+
+}
+
+@media (max-width: 500px) {
+    .about__left em {
+        border-radius: 5px;
+        border-bottom: 3px solid var(--rd);
+    }
+
+    .about__left strong {
+        border-radius: 5px;
+        border-bottom: 3px solid var(--bd);
+    }
+
+    .about__right {
+        padding-left: 30px;
+    }
+}
