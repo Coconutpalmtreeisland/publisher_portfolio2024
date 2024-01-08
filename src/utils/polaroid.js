@@ -2,6 +2,9 @@ export function polaroid() {
     let aboutRight = document.querySelector('.about__right');
     let overlay = document.querySelector('.overlay');
 
+    // 초기 상태에서 overlay가 보이지 않도록 설정
+    overlay.style.filter = 'opacity(0)';
+
     aboutRight.style.transition = 'all 0.5s ease-in-out';
 
     aboutRight.addEventListener('mousemove', function (e) {
@@ -23,5 +26,4 @@ export function polaroid() {
         aboutRight.style.transform = 'perspective(500px) rotateX(0deg) rotateY(0deg)';
         aboutRight.style.transition = 'all 0.5s ease-in-out';
     });
-
 }

@@ -6,7 +6,7 @@ const Loading = () => {
     useEffect(() => {
         const timer = setTimeout(() => {
             setIsVisible(false);
-        }, 4000); // 4초 후에 실행
+        }, 6000); // 4초 후에 실행
 
         return () => {
             clearTimeout(timer); // 컴포넌트 unmount 시, 타이머 제거
