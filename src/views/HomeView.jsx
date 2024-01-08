@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import Header from '../components/Header'
 import Main from '../components/Main'
 import Section1 from '../components/Section1'
@@ -8,12 +8,7 @@ import Section5 from '../components/Section5'
 import Loading from '../components/Loading'
 
 const HomeView = () => {
-    useEffect(() => {
-        document.body.style.overflow = 'hidden';
-        return () => {
-            document.body.style.overflow = 'unset';
-        };
-    }, []);
+
     return (
         <>
             <Loading />

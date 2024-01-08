@@ -20,6 +20,21 @@ const App = () => {
     polaroid();
   })
 
+  useEffect(() => {
+    // 스크롤 막기
+    document.body.style.overflow = 'hidden';
+
+    const timer = setTimeout(() => {
+      // 스크롤 허용
+      document.body.style.overflow = 'auto';
+    }, 6000);  // 6초 후 실행
+
+    // 컴포넌트 unmount 시 타이머를 제거합니다.
+    return () => {
+      clearTimeout(timer);
+    };
+  }, []);
+
   return (
     <BrowserRouter>
       <Routes>

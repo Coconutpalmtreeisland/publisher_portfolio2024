@@ -27,6 +27,10 @@
     letter-spacing: 0.4rem;
 }
 
+.countdown {
+    text-align: center;
+}
+
 @keyframes shadows {
     0% {
         text-shadow: none;

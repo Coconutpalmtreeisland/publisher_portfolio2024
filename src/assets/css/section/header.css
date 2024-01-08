@@ -19,6 +19,7 @@
     backdrop-filter: blur(30px);
     border-radius: 50px;
     padding: 16px 46px;
+    opacity: 0;
 }
 
 .header__left h1 {
@@ -72,6 +73,7 @@
 .header__right ul {
     margin-right: 10px;
     position: relative;
+    opacity: 0;
 }
 
 .header__right li {
@@ -86,7 +88,6 @@
     animation-fill-mode: both;
     margin-bottom: -9px;
 }
-
 
 .img {
     transition: opacity 0.2s;

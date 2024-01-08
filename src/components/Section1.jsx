@@ -1,23 +1,74 @@
-import React from 'react'
-import { toolTips } from '../constants'
+import React from 'react';
+import { phrases, toolTips } from '../constants';
+import { motion } from 'framer-motion';
+import { gsap } from 'gsap';
+import { useEffect } from 'react';
+import { useRef } from 'react';
+import { useInView } from 'react-intersection-observer';
 
 const Section1 = () => {
+    const [ref, inView] = useInView({
+        triggerOnce: true,
+        threshold: 0.75
+    });
+
+    const animation = {
+        initial: { y: "130%" },
+        enter: i => ({ y: "0", transition: { duration: 0.75, ease: [0.33, 1, 0.68, 1], delay: 8 + i * 0.2 } })
+    }
+
+    const tooltipRef = useRef([]);
+
+    useEffect(() => {
+        tooltipRef.current.forEach((tooltip, i) => {
+            gsap.set(tooltip, { opacity: 0 });
+            gsap.to(tooltip, {
+                y: '-=10',
+                duration: 0.3,
+                yoyo: true,
+                repeat: 3,
+                delay: 7 + i * 0.1,
+                onStart: () => gsap.to(tooltip, { opacity: 1, duration: 0.3 })
+            });
+        });
+    }, []);
+
+    const text = 'Incredorable'.split('').map((char, index) => (
+        <div key={index} ref={el => tooltipRef.current[index] = el}>
+            <span>{char}</span>
+        </div>
+    ));
+
     return (
-        <section id="section1">
+        <section id="section1" ref={ref}>
             <div className="center">
                 <h2 className="tooltip">
-                    Incredorable
+                    <div>
+                        <motion.span>
+                            {text}
+                        </motion.span>
+                    </div>
                     {toolTips.map((tip, idx) => (
                         <span key={idx} className={`sticker sticker0${idx + 1}`}>{tip.tag}</span>
                     ))}
                 </h2>
-                <p>
-                    놀라운 성과와 사랑스러운 매력을 두루 갖춘 열정적인 개발자를 목표로<br />
-                    밝은 에너지로 상황을 긍정적으로 바꾸며, 끊임없이 웹 프론트엔드 솔루션을 창조하기 위해 노력합니다.
-                </p>
+                {phrases.map((phrase, index) => {
+                    const words = phrase.split(' ').map((word, i) => `${word} `);
+                    return <div key={index} className='lineMask'>
+                        {words.map((word, i) => (
+                            <motion.p
+                                key={i}
+                                custom={i}
+                                variants={animation}
+                                initial="initial"
+                                animate={inView ? "enter" : ""}
+                            >{word}</motion.p>
+                        ))}
+                    </div>
+                })}
             </div>
         </section>
     )
 }
 
-export default Section1
+export default Section1;
