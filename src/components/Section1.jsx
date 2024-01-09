@@ -13,7 +13,7 @@ const Section1 = () => {
     });
 
     const animation = {
-        initial: { y: "130%" },
+        initial: { y: "140%" },
         enter: i => ({ y: "0", transition: { duration: 0.75, ease: [0.33, 1, 0.68, 1], delay: 8 + i * 0.2 } })
     }
 
