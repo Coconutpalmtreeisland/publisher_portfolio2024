@@ -7,6 +7,7 @@
 import port1 from "../assets/img/port01.png"
 import port2 from "../assets/img/port02.png"
 import port3 from "../assets/img/port03.png"
+import port4 from "../assets/img/port04.png"
 
 export const headerNav = [
     {
@@ -109,5 +110,14 @@ export const siteText = [
         tag: ["PHP", "MySQL", "Team"],
         view: "http://incredorable12.dothome.co.kr/project/sexyBrain/home/main.php",
         code: "https://github.com/Coconutpalmtreeisland/SexyBrain",
+    },
+    {
+        img: port4,
+        title: "Promptivortex",
+        content: "창의적인 프롬프트를 발견하고, 생성하고, 공유하기 위한 오픈소스 AI 프롬프트 사이트입니다. 구글 계정으로 로그인하여 프롬프트를 공유하기 위해 글을 작성할 수 있는 사이트입니다. 내용 및 태그, 사용자 이름으로 검색 가능하며 태그를 클릭하거나 프로필을 클릭해서 해당 글을 모아서 볼 수 있습니다.",
+        time: "3 days",
+        tag: ["Next.js", "MongoDB", "Vercel"],
+        view: "https://real-next-prompt.vercel.app/",
+        code: "https://github.com/Coconutpalmtreeisland/real_next_prompt",
     },
 ]
